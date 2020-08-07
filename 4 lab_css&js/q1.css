@@ -1,0 +1,25 @@
+.one{
+    text-decoration: underline;
+    background-color: greenyellow;
+    font-style: italic;
+    color: blue
+}
+
+.two{
+    color: blue;
+}
+
+.three{
+    color: blue;
+    font-size: 15px;
+}
+
+.four{
+    text-decoration: line-through;
+    color: blue;
+}
+
+.five{
+    color: red;
+    font-weight: bold
+}

@@ -1,0 +1,30 @@
+<HTML>
+<HEAD>
+<TITLE>Test Input</TITLE>
+<SCRIPT LANGUAGE="JavaScript">
+function testResults (form) {
+    var a = form.inputbox1.value;
+    var b=form.inputbox2.value;
+    if (a=="" || a==null || b=="" || b==null)
+                    {
+                        alert("Fill details");
+                        return false;
+                    }
+    alert ("welcome  " + a);
+}
+</SCRIPT>
+</HEAD>
+<BODY>
+<FORM NAME="myform" ACTION="" METHOD="GET">
+<label for="fname">Name:</label>
+    <INPUT TYPE="text" NAME="inputbox1" VALUE=""></INPUT>
+    <br>
+<label for="pass">Password:</label>
+    <INPUT TYPE="password" NAME="inputbox2" VALUE=""></INPUT>
+    <br>
+    <br>
+<INPUT TYPE="submit" NAME="button1" Value="Submit" onClick="testResults(this.form)">
+    </INPUT>
+    <input type="reset" name="button2" value="Reset"></FORM>
+    </BODY>
+</HTML>

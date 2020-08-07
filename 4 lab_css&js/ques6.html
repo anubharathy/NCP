@@ -1,0 +1,36 @@
+<HTML>
+<HEAD>
+<TITLE>SI</TITLE>
+<SCRIPT LANGUAGE="JavaScript">
+function Results (form) {
+    var a =form.inputbox1.value;
+    var b=form.inputbox2.value;
+    var c=form.inputbox3.value;
+    if (a=="" || a==null || b=="" || b==null || c=="" || c==null)
+                    {
+                        alert("Fill details");
+                        return false;
+                    }
+    var si=(a*b*c)/100;
+    alert("Simple interest= "+ si)
+}
+</SCRIPT>
+</HEAD>
+<BODY>
+<FORM NAME="myform" ACTION="" METHOD="GET">
+<label for="p">Enter p</label>
+    <INPUT TYPE="text" NAME="inputbox1" VALUE=""></INPUT>
+    <br>
+<label for="r">Enter r</label>
+    <INPUT TYPE="text" NAME="inputbox2" VALUE=""></INPUT>
+    <br>
+<label for="t">Enter t</label>
+    <INPUT TYPE="text" NAME="inputbox3" VALUE=""></INPUT>   
+    <br>
+    <br>
+<INPUT TYPE="submit" NAME="button1" Value="Submit" onClick="Results(this.form)">
+    </INPUT>
+ </FORM>
+    </BODY>
+</HTML>
+
