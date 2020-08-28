@@ -1,0 +1,101 @@
+<html>
+    <head>
+        <title>
+            Two
+        </title>
+        <script>
+            function hello(form){
+                this.form=form;
+                var st=form.i0.value;
+                var l=document.getElementById("oo");
+                var x=l.options[l.selectedIndex].value;
+                var p=document.getElementById('oo').selectedOptions[0].value;
+                switch(p){
+                    case '0':{
+                        var o=st.length;
+                        alert(o);
+                        break;
+                    }
+                    case '1':{
+                        var o=st.indexOf("Anu");
+                        alert(o);
+                        break;
+                    }
+                    case '2':{
+                        var o=st.lastIndexOf("n");
+                        alert(o);
+                        break;
+                    }
+                    case '3':{
+                         var o=st.search("anu");
+                        alert(o);
+                        break;
+                    }
+                    case '4':
+                        {
+                            var o=st.slice(1,4);
+                            alert(o);
+                            break;
+                        }
+                    case '5':
+                        {
+                            var o=st.substr(0,2);
+                            alert(o);
+                            break;
+                        }
+                    case '6':
+                        {
+                            var o=st.substring(0,5);
+                            alert(o);
+                            break;
+                        }
+                    case '7':
+                        {
+                            var o=st.toUpperCase();
+                            alert(o);
+                            break;
+                        }
+                    case '8':
+                        {
+                            var o=st.toLowerCase();
+                            alert(o);
+                            break;
+                        }
+                    case '9':
+                        {
+                            var o=st.trim();
+                            alert(o);
+                            break;
+                        }
+                    case '10':
+                        {
+                            var o=st.replace("a","s");
+                            alert(o);
+                            break;
+                            }
+                        }
+                }
+
+        </script>
+    </head>
+    <body>
+        <FORM NAME="myform" ACTION="" METHOD="GET">
+        <label for="fname">String:</label>
+        <input type="text" id="i0" name="i0">
+        <select id="oo" name="oo" onchange="hello(myform)">
+            <option value="0">length</option>
+            <option value="1">index of</option>
+            <option value="2">last index of</option>
+            <option value="3">search</option>   
+            <option value="4">slice</option>
+            <option value="5">substring</option>
+            <option value="6">negative substr</option>
+            <option value="7">upper</option>  
+            <option value="8">lower</option>
+            <option value="9">trim</option>
+            <option value="10">replace</option>
+        </select>
+        <input type="button" id="btnsubmit" onclick="hello(myform)" value="Submit" />
+        </FORM>
+    </body>
+</html>

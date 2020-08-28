@@ -1,0 +1,73 @@
+<html>
+<head>
+    <title>Grade Calc </title>
+    <script type="text/javascript">
+        function validate(){
+            form=document.getElementById("form1");
+
+            var message="";
+            var newline="\r\n"
+            
+        if(form1.name.value==null||form1.age.value==null||form1.Address.value==null||form1.country.value==null||form1.MobileNumber.value==null||form1.name.value==""||form1.age.value==""||form1.Address.value==""||form1.country.value==""||form1.MobileNumber.value==""){alert("Enter value");}
+
+            if(parseInt(form1.age.value)<18){message+="You have some time! Minimum age is 18."+newline}
+
+            if(parseInt(form1.m.value)< 50){message+="Maths mark is low."+newline}
+            if(parseInt(form1.p.value) < 50){message+="Physics mark is low."+newline}
+            if(parseInt(form1.c.value)< 50){message+="Chemistry mark is low."+newline}
+
+            if((form1.MobileNumber.value).length < 10){message+="Enter a valid mobile number."+newline}
+            
+            if(message!=""){
+                alert(message);
+            }
+            
+
+            if(message==""){
+                document.write("Welcome "+form1.name.value);
+            }
+
+        }
+    </script>
+
+<link>  
+<style>
+  body{
+    font-family: 'Montserrat', sans-serif;
+  }
+</style>
+</head>
+
+<body>
+<form id="form1">
+    Regisration Form<br /><br />
+
+    <label for="fname">name:</label>
+    <input type="text" name="name" maxlength="50" > <br><br>
+    
+    <label for="fname">age:</label>
+    <input type="number" name="age"/> <br><br>
+
+    Address:
+    <textarea name="Address" rows="5" cols="20" value=""></textarea><br><br>
+
+    Nationality:  
+        <select id="country" name="country">
+       <option value="Afganistan">Afghanistan</option>
+       <option value="Albania">INdia</option>
+       <option value="Algeria">Korea</option>
+    </select><br><br>
+
+    Mobile Number:
+    <input type="text" name="MobileNumber"  maxlength="10">
+    <br><br>
+
+  Maths : <input type="number" min="0" max="100" name="m"> <br /><br>
+  Physics : <input type="number" min="0" max="100" name="p"> <br /><br>
+  Chemistry : <input type="number" min="0" max="100" name="c"> <br /><br>
+
+  <input type="button" name="Btn1" value="Submit" onclick="validate()" />
+  <input type="reset" name="Btn2" value="Reset"/>
+</form>
+</body>
+</html>
