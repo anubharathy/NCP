@@ -1,0 +1,84 @@
+<html>
+   <head>
+    <link rel="stylesheet" href="c.css">
+    <script>
+        function hello() {
+            var alphanum = /^[0-9a-zA-Z]+$/;
+            if (document.getElementById("middlename").value.match(alphanum)) {
+                var date = new Date(document.getElementById("date").value);
+                var today = new Date();
+                var timeDiff = Math.abs(today.getTime() - date.getTime());
+                var age1 = Math.ceil(timeDiff / (1000 * 3600 * 24)) / 365;
+                if (age1 < 17 && age1 > 23) {
+                    alert("Not eligible");
+                } else {
+                    var x = parseInt(document.getElementById("m1").value);
+                    var y = parseInt(document.getElementById("m2").value);
+                    var z = parseInt(document.getElementById("m3").value);
+                    if (x < 50 || y < 50 || z < 50) {
+                        alert("Not eligible");
+                    } else {
+                        var cut = (x + y + z) / 3;
+                        alert(cut);
+                    }
+                }
+            } else {
+                alert("invalid");
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <center>
+        <h1 style="color: red;font-family:'Courier New'">Registration Form</h1>
+    </center>
+
+    <div class="container">
+        <label> Name </label>
+        <input type="text" id="firstname" required />
+        <br>
+        <label> Username: </label>
+        <input type="text" id="middlename" required />
+        <br>
+        <label> DOB: </label>
+        <input type="date" id="date" id="date" required />
+        <br>
+        <label>
+            Phone :
+        </label>
+        <div>
+            <select>
+                <option value="Code">--</option>
+                <option value="+91">+91</option>
+                <option value="+0">0</option>
+                <option value="011">011</option>
+            </select>
+            <input type="number" id="phone" name="phone" size="10" required/>
+        </div>
+        <br>
+        <div>
+            <label>
+                Gender :
+            </label><br>
+            <input type="radio" value="Male" name="gender" checked> Male
+            <input type="radio" value="Female" name="gender"> Female
+            <input type="radio" value="Other" name="gender"> Other
+        </div>
+        <br>
+        <div id="sub1" name="sub1">
+            <label>Maths : </label>
+            <input type="number" id="m1" required/>
+            <br>
+            <label>Physics : </label>
+            <input type="number" id="m2" required/>
+            <br>
+            <label>Chemistry : </label>
+            <input type="number" id="m3" required/>
+            <br>
+        </div>
+        <center>
+        <input type="button" onclick="hello()" value="Register">
+        </center>
+    </div>
+</body></html>

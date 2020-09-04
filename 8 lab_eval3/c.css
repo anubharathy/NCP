@@ -1,0 +1,19 @@
+.hidden1 {
+    display: none;
+}
+
+
+h1 {
+    text-align: center;
+    align-content: center;
+}
+
+img {
+    align-content: center;
+}
+
+.container {
+    padding: 100px;
+    align-content: center;
+    background-color: red;
+}
